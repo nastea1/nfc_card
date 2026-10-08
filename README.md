@@ -27,7 +27,8 @@ The ATtiny is flashed over UPDI; its clock speed should be set to 1 MHz. The NFC
 ## This fork
 
 Modified by Aaron Pursell, 2026-10-07 (notice under CERN-OHL-S-2.0 §3.3(b)). This is a fork of
-[WiHarper/nfc_card](https://github.com/WiHarper/nfc_card); the electrical design is unchanged.
+[WiHarper/nfc_card](https://github.com/WiHarper/nfc_card); the circuit is unchanged (same nets,
+footprints and copper).
 
 What changed:
 
@@ -43,6 +44,19 @@ What changed:
   comment 2 says GPL v3.0, but `LICENSE.md` puts `hardware/` under CERN-OHL-S-2.0.
 * The board is designed for **black soldermask with white silkscreen**. The stackup colours in
   the .kicad_pcb are set to match, but the mask colour must also be chosen in the fab order.
+* **LEDs:** the 20 animation LEDs (LED1-LED20) are **amber** XINGLIGHT XL-1608UYC-06FJ
+  (LCSC C7371901, 600 mcd, Vf 1.9-2.3 V), replacing the red XL-1608SURC-06FJ (C7371900). It is
+  the same family and brightness as the red, and the same part as the existing indicator LED22.
+  The phosphor-green XL-1608SYGC-06 (C965805) was considered and rejected: at 60 mcd it is ten
+  times dimmer on NFC-harvested power. Only the part fields changed; the footprint stays
+  `XL-1608SURC-06FJ`. Its pad 1 is the anode and the amber datasheet calls the cathode pin 1, but
+  in both footprints the **cathode is the -x pad**, so the polarity is unchanged (see
+  `tools/bom/leds.py`).
+* **BOM fix:** R4 (100 R 0402, a charlieplex resistor) had no LCSC number in the original, so a
+  JLCPCB BOM built from the files left it unplaced. It now carries C25076, like R1/R5/R6/R7
+  (`tools/bom/fixes.py`).
+* `tools/fab/make_fab.sh`: builds `fab/gerbers.zip`, `fab/bom_jlc.csv` and `fab/cpl_jlc.csv`
+  with kicad-cli (37 placed parts).
 * `tools/silk/`: scripts that generate, check (DFM, QR decode) and write the silkscreen
   (`apply_final.py` regenerates the board from commit 57a460f), with previews in
   `tools/silk/previews/`.
@@ -54,4 +68,14 @@ repository must be public and its default branch must contain this modified desi
 **Black** soldermask and **White** silkscreen on the fab order form. The stackup colours in the
 .kicad_pcb do not reach the fab, and on a light mask the inverted QR prints with reversed polarity.
 
-![front](tools/silk/previews/front_black.png)
+**JLCPCB order:** upload `fab/gerbers.zip`. Choose 2 layers, thickness 0.8 mm, **Black**
+soldermask, **White** silkscreen and **ENIG** finish. For assembly (top side) upload
+`fab/bom_jlc.csv` and `fab/cpl_jlc.csv`. In the placement preview, check that every LED's cathode
+mark is on the same side as on the red original (the -x pad) and that R4 is placed.
+
+Verified with KiCad 10 kicad-cli against the original board. DRC with schematic parity and ERC
+counts are identical per category (45 / 106, all pre-existing: antenna-footprint clearance, missing
+courtyards, library and pin-type warnings). There are 0 silk-over-copper and 0 silk-edge findings.
+
+![front](tools/silk/previews/kicad_front.png)
+![back](tools/silk/previews/kicad_back.png)

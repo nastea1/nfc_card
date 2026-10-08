@@ -4771,7 +4771,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 53.34 136.3979 90)
 			(effects
 				(font
@@ -4790,7 +4790,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 48.26 135.89 0)
 			(effects
 				(font
@@ -4799,7 +4799,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 48.26 135.89 0)
 			(effects
 				(font
@@ -4808,7 +4808,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 48.26 135.89 0)
 			(effects
 				(font
@@ -4826,7 +4826,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 48.26 135.89 0)
 			(effects
 				(font
@@ -4948,7 +4948,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 77.47 168.1479 90)
 			(effects
 				(font
@@ -4967,7 +4967,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 72.39 167.64 0)
 			(effects
 				(font
@@ -4976,7 +4976,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 72.39 167.64 0)
 			(effects
 				(font
@@ -4985,7 +4985,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 72.39 167.64 0)
 			(effects
 				(font
@@ -5003,7 +5003,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 72.39 167.64 0)
 			(effects
 				(font
@@ -5176,7 +5176,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 97.79 153.1619 90)
 			(effects
 				(font
@@ -5195,7 +5195,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 95.25 151.13 0)
 			(effects
 				(font
@@ -5204,7 +5204,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 95.25 151.13 0)
 			(effects
 				(font
@@ -5213,7 +5213,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 95.25 151.13 0)
 			(effects
 				(font
@@ -5231,7 +5231,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 95.25 151.13 0)
 			(effects
 				(font
@@ -5273,7 +5273,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 129.54 136.6519 90)
 			(effects
 				(font
@@ -5292,7 +5292,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 127 134.62 0)
 			(effects
 				(font
@@ -5301,7 +5301,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 127 134.62 0)
 			(effects
 				(font
@@ -5310,7 +5310,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 127 134.62 0)
 			(effects
 				(font
@@ -5328,7 +5328,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 127 134.62 0)
 			(effects
 				(font
@@ -5448,7 +5448,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 139.7 135.1279 90)
 			(effects
 				(font
@@ -5467,7 +5467,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 134.62 134.62 0)
 			(effects
 				(font
@@ -5476,7 +5476,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 134.62 134.62 0)
 			(effects
 				(font
@@ -5485,7 +5485,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 134.62 134.62 0)
 			(effects
 				(font
@@ -5503,7 +5503,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 134.62 134.62 0)
 			(effects
 				(font
@@ -5770,7 +5770,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 54.61 153.1619 90)
 			(effects
 				(font
@@ -5789,7 +5789,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 52.07 151.13 0)
 			(effects
 				(font
@@ -5798,7 +5798,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 52.07 151.13 0)
 			(effects
 				(font
@@ -5807,7 +5807,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 52.07 151.13 0)
 			(effects
 				(font
@@ -5825,7 +5825,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 52.07 151.13 0)
 			(effects
 				(font
@@ -5867,7 +5867,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 154.94 151.6379 90)
 			(effects
 				(font
@@ -5886,7 +5886,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 149.86 151.13 0)
 			(effects
 				(font
@@ -5895,7 +5895,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 149.86 151.13 0)
 			(effects
 				(font
@@ -5904,7 +5904,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 149.86 151.13 0)
 			(effects
 				(font
@@ -5922,7 +5922,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 149.86 151.13 0)
 			(effects
 				(font
@@ -6030,7 +6030,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 114.3 169.6719 90)
 			(effects
 				(font
@@ -6049,7 +6049,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 111.76 167.64 0)
 			(effects
 				(font
@@ -6058,7 +6058,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 111.76 167.64 0)
 			(effects
 				(font
@@ -6067,7 +6067,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 111.76 167.64 0)
 			(effects
 				(font
@@ -6085,7 +6085,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 111.76 167.64 0)
 			(effects
 				(font
@@ -6353,7 +6353,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 82.55 136.6519 90)
 			(effects
 				(font
@@ -6372,7 +6372,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 80.01 134.62 0)
 			(effects
 				(font
@@ -6381,7 +6381,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 80.01 134.62 0)
 			(effects
 				(font
@@ -6390,7 +6390,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 80.01 134.62 0)
 			(effects
 				(font
@@ -6408,7 +6408,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 80.01 134.62 0)
 			(effects
 				(font
@@ -6551,6 +6551,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25076"
+			(at 29.21 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "823076bb-d247-4636-889c-de1532e46d0f")
 		)
@@ -6584,7 +6593,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 144.78 153.1619 90)
 			(effects
 				(font
@@ -6603,7 +6612,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 142.24 151.13 0)
 			(effects
 				(font
@@ -6612,7 +6621,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 142.24 151.13 0)
 			(effects
 				(font
@@ -6621,7 +6630,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 142.24 151.13 0)
 			(effects
 				(font
@@ -6639,7 +6648,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 142.24 151.13 0)
 			(effects
 				(font
@@ -6856,7 +6865,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 40.64 124.46 90)
 			(effects
 				(font
@@ -6874,7 +6883,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 40.64 135.89 0)
 			(effects
 				(font
@@ -6883,7 +6892,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 40.64 135.89 0)
 			(effects
 				(font
@@ -6892,7 +6901,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 40.64 135.89 0)
 			(effects
 				(font
@@ -6910,7 +6919,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 40.64 135.89 0)
 			(effects
 				(font
@@ -6953,7 +6962,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 91.44 184.6579 90)
 			(effects
 				(font
@@ -6972,7 +6981,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 86.36 184.15 0)
 			(effects
 				(font
@@ -6981,7 +6990,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 86.36 184.15 0)
 			(effects
 				(font
@@ -6990,7 +6999,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 86.36 184.15 0)
 			(effects
 				(font
@@ -7008,7 +7017,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 86.36 184.15 0)
 			(effects
 				(font
@@ -7384,7 +7393,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 171.45 135.1279 90)
 			(effects
 				(font
@@ -7403,7 +7412,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 166.37 134.62 0)
 			(effects
 				(font
@@ -7412,7 +7421,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 166.37 134.62 0)
 			(effects
 				(font
@@ -7421,7 +7430,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 166.37 134.62 0)
 			(effects
 				(font
@@ -7439,7 +7448,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 166.37 134.62 0)
 			(effects
 				(font
@@ -7560,7 +7569,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 124.46 168.1479 90)
 			(effects
 				(font
@@ -7579,7 +7588,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 119.38 167.64 0)
 			(effects
 				(font
@@ -7588,7 +7597,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 119.38 167.64 0)
 			(effects
 				(font
@@ -7597,7 +7606,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 119.38 167.64 0)
 			(effects
 				(font
@@ -7615,7 +7624,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 119.38 167.64 0)
 			(effects
 				(font
@@ -7855,7 +7864,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 92.71 135.1279 90)
 			(effects
 				(font
@@ -7874,7 +7883,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 87.63 134.62 0)
 			(effects
 				(font
@@ -7883,7 +7892,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 87.63 134.62 0)
 			(effects
 				(font
@@ -7892,7 +7901,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 87.63 134.62 0)
 			(effects
 				(font
@@ -7910,7 +7919,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 87.63 134.62 0)
 			(effects
 				(font
@@ -7952,7 +7961,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 67.31 169.6719 90)
 			(effects
 				(font
@@ -7971,7 +7980,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 64.77 167.64 0)
 			(effects
 				(font
@@ -7980,7 +7989,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 64.77 167.64 0)
 			(effects
 				(font
@@ -7989,7 +7998,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 64.77 167.64 0)
 			(effects
 				(font
@@ -8007,7 +8016,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 64.77 167.64 0)
 			(effects
 				(font
@@ -8129,7 +8138,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 64.77 151.6379 90)
 			(effects
 				(font
@@ -8148,7 +8157,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 59.69 151.13 0)
 			(effects
 				(font
@@ -8157,7 +8166,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 59.69 151.13 0)
 			(effects
 				(font
@@ -8166,7 +8175,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 59.69 151.13 0)
 			(effects
 				(font
@@ -8184,7 +8193,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 59.69 151.13 0)
 			(effects
 				(font
@@ -8523,7 +8532,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 81.28 186.1819 90)
 			(effects
 				(font
@@ -8542,7 +8551,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 78.74 184.15 0)
 			(effects
 				(font
@@ -8551,7 +8560,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 78.74 184.15 0)
 			(effects
 				(font
@@ -8560,7 +8569,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 78.74 184.15 0)
 			(effects
 				(font
@@ -8578,7 +8587,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 78.74 184.15 0)
 			(effects
 				(font
@@ -8621,7 +8630,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 107.95 151.6379 90)
 			(effects
 				(font
@@ -8640,7 +8649,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 102.87 151.13 0)
 			(effects
 				(font
@@ -8649,7 +8658,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 102.87 151.13 0)
 			(effects
 				(font
@@ -8658,7 +8667,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 102.87 151.13 0)
 			(effects
 				(font
@@ -8676,7 +8685,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 102.87 151.13 0)
 			(effects
 				(font
@@ -8718,7 +8727,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "XL-1608SURC-06FJ"
+		(property "Value" "XL-1608UYC-06FJ"
 			(at 161.29 136.6519 90)
 			(effects
 				(font
@@ -8737,7 +8746,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608SURC-06FJ_C7371900.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181501_XINGLIGHT-XL-1608UYC-06FJ_C7371901.pdf"
 			(at 158.75 134.62 0)
 			(effects
 				(font
@@ -8746,7 +8755,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-40℃~+85℃ 1.8V~2.3V 120° 20mA 50mW 600mcd 618nm~630nm 625nm Discrete Diode Red Top-mount Water Clear 0603 LED Indication - Discrete ROHS"
+		(property "Description" "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.9V~2.3V 120° 20mA 587nm~595nm 590nm 600mcd 60mW Discrete Diode Top-mount Water Clear Yellow 0603 LED Indication - Discrete ROHS"
 			(at 158.75 134.62 0)
 			(effects
 				(font
@@ -8755,7 +8764,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7371900"
+		(property "LCSC" "C7371901"
 			(at 158.75 134.62 0)
 			(effects
 				(font
@@ -8773,7 +8782,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part" "XL-1608SURC-06FJ"
+		(property "Manufacturer Part" "XL-1608UYC-06FJ"
 			(at 158.75 134.62 0)
 			(effects
 				(font

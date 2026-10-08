@@ -12,7 +12,10 @@ working-tree file, so re-running gives byte-identical output regardless of what 
      (the JLCPCB order form must ALSO be set to Black mask / White silk - this does not do that)
   6. title block: keep Wilson's lines (company, comment 1, comment 2) as they are - they are his
      Notices - and ADD a modification notice (comment 3/4) and bump rev (CERN-OHL-S-2.0 s.3.3(b))
-  7. write hardware/Business Card v2.kicad_pcb in place and print counts
+  7. LED1..LED20 part fields red XL-1608SURC-06FJ -> amber XL-1608UYC-06FJ (tools/bom/leds.py;
+     the schematic gets the same swap from `python tools/bom/leds.py`); R4 gets its missing LCSC
+     C25076 (tools/bom/fixes.py - absent in the original, so JLCPCB would not place it)
+  8. write hardware/Business Card v2.kicad_pcb in place and print counts
 
 Run:  cd /root/nfc_card/tools/silk && /root/nfc-tools/.venv/bin/python -s apply_final.py
 """
@@ -28,13 +31,15 @@ import silklib as S  # noqa: E402
 from kpcb import parse  # noqa: E402
 from back_credit import back_remover, build_back  # noqa: E402
 import final  # noqa: E402
+sys.path.insert(0, os.path.join(HERE, '..', 'bom'))
+import leds  # noqa: E402
 
 REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
 PCB_REL = 'hardware/Business Card v2.kicad_pcb'
 SOURCE_REV = S.SOURCE_REV
 EXPECT_REMOVED = 212 + 20
 REV = '2-ap1'
-MOD_NOTICES = {3: 'Modified by Aaron Pursell 2026-10-07: retro silkscreen front + back credit',
+MOD_NOTICES = {3: 'Modified by Aaron Pursell 2026-10-07: retro silkscreen front + back credit, amber LEDs',
                4: 'This fork: hardware CERN-OHL-S-2.0 (LICENSE.md); src github.com/nastea1/nfc_card'}
 UUID_RE = re.compile(r'"([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})"')
 STACKUP_COLOURS = {'F.SilkS': 'White', 'F.Mask': 'Black', 'B.Mask': 'Black', 'B.SilkS': 'White'}
@@ -163,6 +168,10 @@ def main():
     assert not dangling, f'{len(dangling)} group members reference undefined UUIDs'
     new, colours = set_stackup_colours(new)
     new, tb = set_title_block(new)
+    new, nled = leds.swap(new)
+    assert nled == 20
+    import fixes
+    new = fixes.apply(new, absolute_at=False)
     parse(new)
     path = os.path.join(REPO, PCB_REL)
     with open(path, 'w', encoding='utf-8', newline='') as f:
@@ -172,6 +181,7 @@ def main():
     print(f'added gr_poly : front F.SilkS {len(front)}, back B.SilkS {len(back)}, total {len(front) + len(back)}')
     print(f'groups        : (members, pruned) {gstats}; undefined members now {len(dangling)}')
     print(f'stackup       : {colours}')
+    print(f'leds          : {nled} x LED1..20 -> {leds.TO_VALUE} ({leds.TO_LCSC})')
     print('title_block   :\n' + tb.rstrip())
     print(f'wrote         : {path} ({len(new)} chars)')
 

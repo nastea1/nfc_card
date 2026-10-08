@@ -13,11 +13,11 @@ Run:  cd /root/nfc_card/tools/silk && /root/nfc-tools/.venv/bin/python -s design
 """
 import sys, json, math, os
 
-sys.path.insert(0, "/root/nfc_card/tools/silk")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import silklib as S
 
 URL = "https://staxxlogix.com/"
-OUT = "/root/.claude/jobs/5ff251a4/tmp/nfc/out"
+OUT = S.OUT_DIR
 NAME = "crt-terminal"
 LAYER = "F.SilkS"
 AX0, AY0, AX1, AY1 = S.FRONT_AREA

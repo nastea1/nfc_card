@@ -38,9 +38,39 @@ MASKS = {
 GOLD = (212, 175, 55)
 
 
+# Pristine upstream board (Wilson Harper's artwork intact) that every design is laid out against.
+SOURCE_REV = '57a460f'
+PCB_REL = 'hardware/Business Card v2.kicad_pcb'
+REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
+# Scratch output (renders, cached geometry). Git-ignored; override with NFC_OUT.
+OUT_DIR = os.environ.get('NFC_OUT') or os.path.join(HERE, 'out')
+
+
+def source_geom_path():
+    """geom.json of the board at SOURCE_REV, extracted with geom.py and cached in OUT_DIR.
+    Derived from git, so it works on a fresh clone with no external files."""
+    import subprocess
+    import sys
+    js = os.path.join(OUT_DIR, f'geom_{SOURCE_REV}.json')
+    if not os.path.exists(js):
+        os.makedirs(OUT_DIR, exist_ok=True)
+        src = subprocess.run(['git', '-C', REPO, 'show', f'{SOURCE_REV}:{PCB_REL}'],
+                             capture_output=True, check=True).stdout
+        pcb = os.path.join(OUT_DIR, f'source_{SOURCE_REV}.kicad_pcb')
+        with open(pcb, 'wb') as f:
+            f.write(src)
+        tmp = js + '.tmp'
+        subprocess.run([sys.executable, '-s', os.path.join(HERE, 'geom.py'), pcb, tmp],
+                       cwd=HERE, check=True, capture_output=True)
+        os.replace(tmp, js)
+    return js
+
+
 def load_geom(path=None):
-    path = path or os.environ.get('NFC_GEOM', '/root/.claude/jobs/5ff251a4/tmp/nfc/geom.json')
-    return json.load(open(path))
+    """Board geometry: explicit path, else $NFC_GEOM, else the SOURCE_REV board (cached)."""
+    path = path or os.environ.get('NFC_GEOM') or source_geom_path()
+    with open(path) as f:
+        return json.load(f)
 
 
 # ---------- primitive helpers ----------
@@ -289,23 +319,34 @@ def check(g, pieces, side='front', area=None, scale=40):
     return res
 
 
-def qr_verify(g, pieces, data, mask='white', side='front', spread_mm=(0.0, 0.05, -0.04), scale=12):
+def qr_verify(g, pieces, data, mask='white', side='front', spread_mm=(0.0, 0.05, -0.04), scale=12,
+              hi=40):
     """Render the side like a photo (8-12 px/mm), simulate ink spread/shrink, decode with OpenCV.
-    Returns {spread: decoded_text_or_None}. All must equal data."""
+    Returns {spread: decoded_text_or_None}. All must equal data.
+
+    Ink spread happens on the card, before the camera samples it: the side is rendered at `hi`
+    px/mm, the spread is applied there with a disc of radius round(|s| * hi) px (exact to
+    1/hi mm), and the result is area-downsampled to `scale` px/mm, blurred and decoded. (Applying
+    it at `scale` instead quantizes it to whole camera pixels: at 8-12 px/mm a 0.05 or 0.08 mm
+    spread became a 1x1 kernel, i.e. no spread at all.)"""
     import numpy as np, cv2
-    img = render(g, pieces, side=side, mask=mask, scale=scale, show_cu=False)
+    hi = max(hi, scale)
+    img = render(g, pieces, side=side, mask=mask, scale=hi, show_cu=False)
     gray = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2GRAY)
+    dsize = (int(round(gray.shape[1] * scale / hi)), int(round(gray.shape[0] * scale / hi)))
     out = {}
     det = cv2.QRCodeDetector()
+    silk_dark = MASKS[mask]['silk'][0] < MASKS[mask]['mask'][0]
     for s in spread_mm:
-        k = max(1, int(abs(s) * scale * 2) | 1)
-        ker = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k))
-        silk_dark = MASKS[mask]['silk'][0] < MASKS[mask]['mask'][0]
-        im = gray.copy()
-        if s:
+        r = int(round(abs(s) * hi))
+        im = gray
+        if s and r:
+            ker = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2 * r + 1, 2 * r + 1))
             grow_silk = s > 0
             # silk dark -> growing silk = erode the image (dark spreads); silk light -> dilate
             im = cv2.erode(im, ker) if grow_silk == silk_dark else cv2.dilate(im, ker)
+        if hi != scale:
+            im = cv2.resize(im, dsize, interpolation=cv2.INTER_AREA)
         im = cv2.GaussianBlur(im, (3, 3), 0)
         txt, _, _ = det.detectAndDecode(im)
         if not txt:

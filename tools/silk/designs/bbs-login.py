@@ -11,11 +11,11 @@ import json
 import os
 import sys
 
-sys.path.insert(0, "/root/nfc_card/tools/silk")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import silklib as S  # noqa: E402
 
 URL = "https://staxxlogix.com/"
-OUT = "/root/.claude/jobs/5ff251a4/tmp/nfc/out"
+OUT = S.OUT_DIR
 L = "F.SilkS"
 
 # ---------------------------------------------------------------- 5x7 pixel font

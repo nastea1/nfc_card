@@ -3,12 +3,13 @@
 
 Replaces Wilson Harper's "Made by Wilson Harper <heart>" (bottom-right as seen from the back) with
 a BBS-style credit block, and adds a shell-prompt source line in the free strip under the parts
-list. The original designer's credit is KEPT (CERN-OHL-S-2.0 requires retaining notices), and
-his heart survives as a pixel heart.
+list. The original designer's credit is KEPT WORD FOR WORD ("MADE BY" / "WILSON HARPER" + heart):
+CERN-OHL-S-2.0 s.1.10/3.2 treat acknowledgements as Notices that may not be changed or removed.
+The remix credit is added below it, not merged into it.
 
 Seen from the back:
 
-    U1 ATtiny816 | D1 TVS DIODE      ORIG. DESIGN
+    U1 ATtiny816 | D1 TVS DIODE      MADE BY
     -------------+------------       WILSON HARPER <3
     U2 NTAG I2C+ | Q1 P-MOSFET       REMIX:
                  |                   AARON PURSELL
@@ -17,8 +18,9 @@ Seen from the back:
     > SRC: GITHUB.COM/NASTEA1/NFC_CARD#   CERN-OHL-S-2.0
 
 Board: BLACK soldermask, WHITE silkscreen (white = phosphor). Font: 5-row pixel font
-(3x5 cells; M/W 5 px, I . : 1 px) at px = 0.24 mm -> 1.2 mm cap height, 0.24 mm strokes and
-0.24 mm counters (JLCPCB: >= 1.0 mm text, >= 0.16 mm features). Every new piece also keeps
+(3x5 cells; D N 4 px, M W 5 px, I . : 1 px) at px = 0.24 mm -> 1.2 mm cap height, 0.24 mm
+strokes and counters (JLCPCB: >= 1.0 mm text, >= 0.16 mm features). 1.2 mm is the most the
+credit column allows: 'WILSON HARPER' + heart already spans it at 0.24 mm px. Every new piece also keeps
 >= 0.30 mm from the existing back silk that stays (checked by clearance(); S.check cannot see
 top-level gr_* silk).
 
@@ -36,10 +38,10 @@ import os
 import re
 import sys
 
-sys.path.insert(0, "/root/nfc_card/tools/silk")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import silklib as S  # noqa: E402
 
-OUT = "/root/.claude/jobs/5ff251a4/tmp/nfc/out"
+OUT = S.OUT_DIR
 L = "B.SilkS"
 
 # ---------------------------------------------------------------- removal of the old credit
@@ -69,12 +71,14 @@ def back_remover(head, text):
 
 # ---------------------------------------------------------------- 5-row pixel font
 # Mostly 3x5 cells; proportional where a 3-px cell hurts legibility: M and W are 5 px wide
-# (a 3-px W reads as U/H at 1.2 mm), I . : are 1 px wide. Tracking = 1 px.
+# (a 3-px W reads as U/H at 1.2 mm); N is 4 px with a real diagonal (a 3-px N is a lowercase n);
+# D is 4 px so it differs from the boxy O by WIDTH, not by a 1-px corner notch that ink spread
+# fills; 0 is a narrow oval so it is not the boxy O; I . : are 1 px wide. Tracking = 1 px.
 F35 = {
     'A': "### #.# ### #.# #.#",
     'B': "##. #.# ##. #.# ##.",
     'C': "### #.. #.. #.. ###",
-    'D': "##. #.# #.# #.# ##.",
+    'D': "###. #..# #..# #..# ###.",
     'E': "### #.. ##. #.. ###",
     'G': "### #.. #.# #.# ###",
     'H': "#.# #.# ### #.# #.#",
@@ -82,7 +86,7 @@ F35 = {
     'F': "### #.. ##. #.. #..",
     'L': "#.. #.. #.. #.. ###",
     'M': "#...# ##.## #.#.# #...# #...#",
-    'N': "##. #.# #.# #.# #.#",
+    'N': "#..# ##.# #.## #..# #..#",
     'O': "### #.# #.# #.# ###",
     'P': "##. #.# ##. #.. #..",
     'R': "##. #.# ##. #.# #.#",
@@ -91,7 +95,8 @@ F35 = {
     'U': "#.# #.# #.# #.# ###",
     'W': "#...# #...# #.#.# ##.## #...#",
     'X': "#.# #.# .#. #.# #.#",
-    '0': "### #.# #.# #.# ###",
+    'Y': "#.# #.# .#. .#. .#.",
+    '0': ".#. #.# #.# #.# .#.",
     '1': ".#. ##. .#. .#. ###",
     '2': "##. ..# .#. #.. ###",
     '.': ". . . . #",
@@ -135,7 +140,7 @@ def layout(g):
     pcs = []
     # credit column: right of the parts list. Free: u 161.0..175.4, y 101.2..112.7
     cu0 = 161.45
-    lines = ["ORIG. DESIGN", "WILSON HARPER", "REMIX:", "AARON PURSELL", None, "OPEN HW", "CERN-OHL-S-2.0"]
+    lines = ["MADE BY", "WILSON HARPER", "REMIX:", "AARON PURSELL", None, "OPEN HW", "CERN-OHL-S-2.0"]
     # Top = 101.6 (0.4 below the LED Matrix box). Bottom row top = 110.70 so the row ends at 111.90,
     # >= 0.30 from the upward trace-art arrow tip under "2.0" (y ~112.2 at u 172.9..174.0).
     # The 6 inter-row gaps are spread evenly between the two.
@@ -219,8 +224,10 @@ def main():
     big.crop((int(a[0]), int(a[1]), int(b[0]), int(b[1]))).save(zoom)
     removed = [n for n, i in enumerate(g['gr']['B.SilkS']) if REMOVE_BACK(i)]
     rp = [p for n in removed for p in g['gr']['B.SilkS'][n]['pts']]
-    src = open(S.PCB_DEFAULT, encoding='utf-8').read()
-    _, n_txt = S.apply(src, [], back_remover)
+    import subprocess
+    src = subprocess.run(['git', '-C', S.REPO, 'show', f'{S.SOURCE_REV}:{S.PCB_REL}'],
+                         capture_output=True, check=True).stdout.decode('utf-8')
+    _, n_txt = S.apply(src, [], back_remover)          # on the pristine board: expect 20
     rep = {
         'removed_geom_items': len(removed), 'removed_idx': removed,
         'removed_bbox': [round(min(p[0] for p in rp), 3), round(min(p[1] for p in rp), 3),

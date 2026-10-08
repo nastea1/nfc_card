@@ -5,6 +5,7 @@ Usage (after apply_final.py):
   cd /root/nfc_card/tools/silk
   /root/nfc-tools/.venv/bin/python -s geom.py "../../hardware/Business Card v2.kicad_pcb" OUT/geom_final.json
   /root/nfc-tools/.venv/bin/python -s verify_final.py ORIG_GEOM.json OUT/geom_final.json OUT/
+  (ORIG_GEOM.json may be '-' = geometry of the pristine board at silklib.SOURCE_REV, from git)
 
 Checks, all from the WRITTEN file's geometry:
   - every non-silk item (pads, tracks, zones, footprints, footprint graphics, Edge.Cuts, F/B.Mask)
@@ -12,7 +13,10 @@ Checks, all from the WRITTEN file's geometry:
   - F/B.SilkS counts = original - removed + added, and the new polygons equal the design to 1e-6 mm
   - renders both sides (drop_old_front=False, i.e. exactly what is in the file) and decodes the QR
     straight from the round-trip front PNG, plus qr_verify with ink spread at 20 px/mm
-  - S.check on the written front polygons
+  - S.check on the written front AND back polygons, back clearance vs the kept back silk
+    (measured against the ORIGINAL geometry - against the written one it would see itself)
+  - qr_verify at 8 / 10 / 12 / 20 px/mm on the black mask
+  - every (group ... (members ...)) UUID is defined in the written board
 
 Note: silklib.render()/qr_verify() default to drop_old_front=True, which drops EVERY F.SilkS
 graphic inside OLD_FRONT_ART - including the new art once it is in the board. So
@@ -27,7 +31,8 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(HERE, 'designs'))
 import silklib as S  # noqa: E402
 import final  # noqa: E402
-from back_credit import build_back  # noqa: E402
+from back_credit import build_back, clearance  # noqa: E402
+from apply_final import undefined_group_members  # noqa: E402
 
 URL = final.URL
 
@@ -39,7 +44,12 @@ def counts(g):
 
 
 def main(orig_path, final_path, out_dir):
-    import numpy as np, cv2
+    import cv2
+    if orig_path == '-':
+        orig_path = S.source_geom_path()
+    # the designs lay themselves out against the ORIGINAL board (load_geom() with no path):
+    # point them at the same geometry this check compares against
+    os.environ['NFC_GEOM'] = os.path.abspath(orig_path)
     g0, g1 = S.load_geom(orig_path), S.load_geom(final_path)
     c0, c1 = counts(g0), counts(g1)
     diff = {k: (c0.get(k), c1.get(k)) for k in sorted(set(c0) | set(c1)) if c0.get(k) != c1.get(k)}
@@ -79,7 +89,14 @@ def main(orig_path, final_path, out_dir):
         'qr_decoded_from_roundtrip_png': png_decode,
         'qr_verify_written_s20': S.qr_verify(g1, nf, URL, mask='black', scale=20,
                                              spread_mm=(0.0, 0.05, -0.05, 0.08, -0.08)),
+        'qr_verify_written_black': {s: S.qr_verify(g1, nf, URL, mask='black', scale=s,
+                                                   spread_mm=(0.0, 0.05, -0.05, 0.08, -0.08, 0.10, -0.10))
+                                    for s in (8, 10, 12)},
         'check_front_written': S.check(g1, nf, 'front', S.FRONT_AREA),
+        'check_back_written': S.check(g1, nb, 'back'),
+        'back_clearance_vs_kept_silk': clearance(g0, nb),
+        'undefined_group_members': len(undefined_group_members(
+            open(os.path.join(S.REPO, S.PCB_REL), encoding='utf-8').read())),
         'renders': [fpng, bpng],
     }
     print(json.dumps(rep, indent=1, default=str))

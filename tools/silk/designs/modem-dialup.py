@@ -18,11 +18,11 @@ import json
 import os
 import sys
 
-sys.path.insert(0, "/root/nfc_card/tools/silk")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import silklib as S  # noqa: E402
 
 URL = "https://staxxlogix.com/"
-OUT = "/root/.claude/jobs/5ff251a4/tmp/nfc/out"
+OUT = S.OUT_DIR
 NAME = "modem-dialup"
 L = "F.SilkS"
 MIN_DIM = 0.2  # our own hard floor for every emitted rectangle (DFM disc is ~0.175 mm)

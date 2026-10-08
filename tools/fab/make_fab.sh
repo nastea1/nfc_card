@@ -31,7 +31,15 @@ z.close()" "$OUT/gerbers.zip" )
 python3 - "$TMP/bom.csv" "$TMP/pos.csv" "$OUT/bom_jlc.csv" "$OUT/cpl_jlc.csv" <<'PY'
 import csv, sys
 bom_in, pos_in, bom_out, cpl_out = sys.argv[1:5]
-rows = [r for r in csv.DictReader(open(bom_in, encoding='utf-8')) if r['LCSC Part #'].strip()]
+rows, by = [], {}
+for r in csv.DictReader(open(bom_in, encoding='utf-8')):
+    if not r['LCSC Part #'].strip():
+        continue
+    k = r['LCSC Part #'].strip()
+    if k in by:   # same part on two footprint names (LED1-20 + LED22): one line, or JLCPCB flags it
+        by[k]['Designator'] += ',' + r['Designator']
+    else:
+        by[k] = r; rows.append(r)
 placed = {d.strip() for r in rows for d in r['Designator'].split(',')}
 with open(bom_out, 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, ['Comment', 'Designator', 'Footprint', 'LCSC Part #']); w.writeheader(); w.writerows(rows)

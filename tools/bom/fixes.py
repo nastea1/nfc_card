@@ -5,6 +5,10 @@ R4 (100 R, 0402, one of the five charlieplex resistors R1/R4-R7) has no LCSC fie
 original schematic or board, while R1, R5, R6 and R7 - same value, same footprint - all carry
 C25076. A JLCPCB assembly BOM built from the files therefore leaves R4 unplaced, and the LEDs on
 its charlieplex line stay dark. The fix clones R5's LCSC property into R4.
+
+C1 (1.5 pF, the antenna tuning capacitor, 0402 footprint) carries C1639 in the original, which is
+0603CG1R5C500NT - an 0603 part that does not fit the 0402 land pattern (JLCPCB matched it as such).
+It becomes C1552, 0402CG1R5C500NT: same maker (FH), series, C0G and +-0.25 pF code, in 0402.
 """
 import re
 import uuid
@@ -65,5 +69,17 @@ def add_field_from_sibling(src, ref, sibling, key, expect, absolute_at):
     return src[:rs] + nb + src[re_:]
 
 
+def set_field(src, ref, key, old, new):
+    """Change ref's `key` from old to new (asserts the old value, exactly one match)."""
+    blocks = [(s, e) for s, e, h in S._blocks(src) if h in ('footprint', 'symbol')
+              and (m := _REF.search(src[s:e])) and m.group(1) == ref]
+    assert len(blocks) == 1, f'{ref}: {len(blocks)} blocks'
+    s, e = blocks[0]
+    b, n = re.subn(r'(\(property "' + re.escape(key) + r'" ")' + re.escape(old) + '"', r'\g<1>' + new + '"', src[s:e])
+    assert n == 1, f'{ref} {key} is not {old}'
+    return src[:s] + b + src[e:]
+
+
 def apply(src, absolute_at):
-    return add_field_from_sibling(src, 'R4', 'R5', 'LCSC', 'C25076', absolute_at)
+    src = add_field_from_sibling(src, 'R4', 'R5', 'LCSC', 'C25076', absolute_at)
+    return set_field(src, 'C1', 'LCSC', 'C1639', 'C1552')

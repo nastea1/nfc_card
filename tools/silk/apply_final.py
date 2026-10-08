@@ -14,7 +14,8 @@ working-tree file, so re-running gives byte-identical output regardless of what 
      Notices - and ADD a modification notice (comment 3/4) and bump rev (CERN-OHL-S-2.0 s.3.3(b))
   7. LED1..LED20 part fields red XL-1608SURC-06FJ -> amber XL-1608UYC-06FJ (tools/bom/leds.py;
      the schematic gets the same swap from `python tools/bom/leds.py`); R4 gets its missing LCSC
-     C25076 (tools/bom/fixes.py - absent in the original, so JLCPCB would not place it)
+     C25076 (tools/bom/fixes.py - absent in the original, so JLCPCB would not place it); C1 LCSC
+     C1639 (an 0603 part) -> C1552 (the same cap in 0402, matching the footprint)
   8. write hardware/Business Card v2.kicad_pcb in place and print counts
 
 Run:  cd /root/nfc_card/tools/silk && /root/nfc-tools/.venv/bin/python -s apply_final.py

@@ -55,8 +55,11 @@ What changed:
 * **BOM fix:** R4 (100 R 0402, a charlieplex resistor) had no LCSC number in the original, so a
   JLCPCB BOM built from the files left it unplaced. It now carries C25076, like R1/R5/R6/R7
   (`tools/bom/fixes.py`).
+* **BOM fix:** C1 (the 1.5 pF antenna tuning cap, 0402 footprint) pointed at C1639, which is an
+  **0603** part (0603CG1R5C500NT). It is now C1552 (0402CG1R5C500NT): same maker, series, C0G
+  and tolerance, in the 0402 size the footprint needs.
 * `tools/fab/make_fab.sh`: builds `fab/gerbers.zip`, `fab/bom_jlc.csv` and `fab/cpl_jlc.csv`
-  with kicad-cli (37 placed parts).
+  with kicad-cli (37 placed parts, 12 BOM lines; one line per LCSC part).
 * `tools/silk/`: scripts that generate, check (DFM, QR decode) and write the silkscreen
   (`apply_final.py` regenerates the board from commit 57a460f), with previews in
   `tools/silk/previews/`.

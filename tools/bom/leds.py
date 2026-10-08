@@ -17,7 +17,7 @@ land pattern. At JLCPCB, check in the placement preview that every LED's cathode
 Usage:
   leds.swap(text) -> (new_text, n)       for .kicad_pcb (footprints) and .kicad_sch (symbols)
   python leds.py                          rewrite the schematic from the pristine 57a460f source
-                                          (LED swap + fixes.py: R4's missing LCSC number)
+                                          (LED swap + fixes.py: R4's missing LCSC number, C1 0603->0402 part)
 """
 import os
 import re
@@ -85,7 +85,7 @@ def main():
     parse(new)
     with open(os.path.join(repo, SCH_REL), 'w', encoding='utf-8', newline='') as f:
         f.write(new)
-    print(f'schematic: {n} LEDs -> {TO_VALUE} ({TO_LCSC}), R4 LCSC C25076 added; wrote {SCH_REL}')
+    print(f'schematic: {n} LEDs -> {TO_VALUE} ({TO_LCSC}), R4 LCSC C25076 added, C1 -> C1552; wrote {SCH_REL}')
 
 
 if __name__ == '__main__':

@@ -40,23 +40,22 @@ struct MorseElement {
   uint8_t units;
 };
 
+// Easter-egg message blinked on the indicator LED (Morse): "STAXXLOGIX.COM"
 const MorseElement morseSequence[] = {
-  {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 3}, {false, 3},
-  {true, 1}, {false, 1}, {true, 1}, {false, 3},
-  {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 1}, {false, 3},
-  {true, 1}, {false, 1}, {true, 1}, {false, 1}, {true, 1}, {false, 3},
-  {true, 3}, {false, 1}, {true, 3}, {false, 1}, {true, 3}, {false, 3},
-  {true, 3}, {false, 1}, {true, 1}, {false, 3},
-  {true, 1}, {false, 1}, {true, 1}, {false, 1}, {true, 1}, {false, 1}, {true, 1}, {false, 3},
-  {true, 1}, {false, 1}, {true, 3}, {false, 3},
-  {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 3},
-  {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 3},
-  {true, 1}, {false, 3},
-  {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 3},
-  {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 3}, {false, 3},
-  {true, 3}, {false, 1}, {true, 1}, {false, 3},
-  {true, 1}, {false, 3},
-  {true, 3}, {false, 7}
+  {true, 1}, {false, 1}, {true, 1}, {false, 1}, {true, 1}, {false, 3},  // S  ...
+  {true, 3}, {false, 3},  // T  -
+  {true, 1}, {false, 1}, {true, 3}, {false, 3},  // A  .-
+  {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 1}, {false, 1}, {true, 3}, {false, 3},  // X  -..-
+  {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 1}, {false, 1}, {true, 3}, {false, 3},  // X  -..-
+  {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 1}, {false, 3},  // L  .-..
+  {true, 3}, {false, 1}, {true, 3}, {false, 1}, {true, 3}, {false, 3},  // O  ---
+  {true, 3}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 3},  // G  --.
+  {true, 1}, {false, 1}, {true, 1}, {false, 3},  // I  ..
+  {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 1}, {false, 1}, {true, 3}, {false, 3},  // X  -..-
+  {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 3}, {false, 3},  // .  .-.-.-
+  {true, 3}, {false, 1}, {true, 1}, {false, 1}, {true, 3}, {false, 1}, {true, 1}, {false, 3},  // C  -.-.
+  {true, 3}, {false, 1}, {true, 3}, {false, 1}, {true, 3}, {false, 3},  // O  ---
+  {true, 3}, {false, 1}, {true, 3}, {false, 7}   // M  --
 };
 
 
